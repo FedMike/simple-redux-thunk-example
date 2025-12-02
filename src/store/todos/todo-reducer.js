@@ -1,4 +1,4 @@
-import { ADD_TODOS, SER_ERROR, SET_LOADING } from "./todo-actions";
+import { ADD_TODO, ADD_TODOS, SER_ERROR, SET_LOADING } from "./todo-actions";
 
 const initialState = {
     status: 'idle',
@@ -8,6 +8,11 @@ const initialState = {
 
 export const todoReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ADD_TODO:
+            return {
+                ...state,
+                list: [...state.list, action.payload],
+            };
         case ADD_TODOS:
             return {
                 ...state,

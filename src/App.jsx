@@ -6,6 +6,7 @@ import { UserList } from "./components/UserList";
 
 import { loadUsers } from "./store/users/user-actions";
 import { loadTodos } from "./store/todos/todo-actions";
+import { NewTodo } from "./components/NewTodo";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello Redux Thunk</h1>
+      <NewTodo />
       <UserList />
       <TodoList />
     </div>
